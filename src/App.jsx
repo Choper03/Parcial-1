@@ -9,25 +9,40 @@ import Login from "./Login.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
+  const [login, setLogin] = useState(false);
 
+const entrar = () => {
+  setLogin(true);
+}
+const salir = () => {
+  setLogin(false);
+}
   return (
     <>
     <Router>
       <div className="App">
-        <header>
-          <Navbar />
-        </header>
-        <main>
-          <Routes> {}
-            <Route path="/" element={<Home />} /> {}
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Clientes" element={<Cliente />} />
-            <Route path="/Productos" element={<Producto />} />
-          </Routes>
-        </main>
-        <footer>
-          {"By Choper03"}
-        </footer>
+        
+        {login ? (
+         <div>
+            <header>
+            <Navbar salir={salir}/>
+            </header>
+          <main>
+            <Routes> 
+              <Route path="/Home" element={<Home />} />
+              <Route path="/Clientes" element={<Cliente />} />
+              <Route path="/Productos" element={<Producto />} />
+            </Routes>
+          </main>
+          <footer>
+            {"By Choper03"}
+          </footer>
+      </div>
+      ) : (
+        <Routes>
+          <Route path="/" element={<Login entrar={entrar}/> } />
+        </Routes>
+      )}
       </div>
     </Router>
   </>

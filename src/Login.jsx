@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const LoginForm = () => {
+const LoginForm = ({entrar}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -27,9 +27,10 @@ const LoginForm = () => {
       setErrorMessage('La contraseña debe tener al menos 7 caracteres, una mayúscula y un número');
       return;
     }
+
     alert("Usuario Valido");
     setErrorMessage('');
-
+    entrar();
   };
 
   return (
