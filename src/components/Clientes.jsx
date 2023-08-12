@@ -1,10 +1,11 @@
 import BusinessCard from "./Card";
-
+import "./Home.css"
 function Cliente() {
     return (
       <>
       
       <h1 className="my-4">Clientes</h1>
+      <div className="hola">
       <div className="container">
       <BusinessCard
         imgSrc={"https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg"}
@@ -22,6 +23,7 @@ function Cliente() {
         email={"elizabeth03@gmail.com"}
         phone={"58203372"}
         />
+    </div>
     </div>
       </>
     );

@@ -6,6 +6,7 @@ import Home from "./components/Home.jsx"
 import Producto from "./components/Productos.jsx"
 import Cliente from "./components/Clientes.jsx"
 import Login from "./Login.jsx"
+import Salarios from "./components/Salrios.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -32,6 +33,7 @@ const salir = () => {
               <Route path="/Home" element={<Home />} />
               <Route path="/Clientes" element={<Cliente />} />
               <Route path="/Productos" element={<Producto />} />
+              <Route path="/Salarios" element={<Salarios />} />
             </Routes>
           </main>
           <footer>

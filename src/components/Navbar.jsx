@@ -12,6 +12,7 @@ const AppNavbar = ({salir}) => {
         <Nav className="ml-auto">
           <Nav.Link as={Link} to="/Clientes">Clientes</Nav.Link>
           <Nav.Link as={Link} to="/Productos">Productos</Nav.Link>
+          <Nav.Link as={Link} to="/Salarios">Calculo Salario</Nav.Link>
           <Nav.Link as={Link} to="/" onClick={salir}>Cerrar Sesion</Nav.Link>
         </Nav>
       </Navbar.Collapse>
