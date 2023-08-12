@@ -17,24 +17,19 @@ const LoginForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Validating email format
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailRegex.test(email)) {
       setErrorMessage('El correo electrónico no es válido');
       return;
     }
 
-    // Validating password format
     if (password.length < 7 || !/[A-Z]/.test(password) || !/\d/.test(password)) {
       setErrorMessage('La contraseña debe tener al menos 7 caracteres, una mayúscula y un número');
       return;
     }
-
-    // Clear error message if validation passes
+    alert("Usuario Valido");
     setErrorMessage('');
 
-    // Perform login logic here
-    // ...
   };
 
   return (
